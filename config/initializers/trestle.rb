@@ -111,4 +111,13 @@ Trestle.configure do |config|
   # Enable debugging of form errors. Defaults to true in development mode.
   #
   # config.debug_form_errors = true
+
+  # Optional, but it is always nice to give folks the option of
+  # logging out:
+  config.hook("view.header") do
+    render "admin/header"
+  end
+
+  require 'trestle-devise/controller_methods'
+  Trestle::ApplicationController.send(:include, Trestle::Auth::ControllerMethods)
 end
