@@ -118,6 +118,6 @@ Trestle.configure do |config|
     render "admin/header"
   end
 
-  require 'trestle-devise/controller_methods'
+  require "trestle-devise/controller_methods"
   Trestle::ApplicationController.send(:include, Trestle::Auth::ControllerMethods)
 end
