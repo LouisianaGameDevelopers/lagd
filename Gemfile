@@ -18,6 +18,7 @@ group :development, :test do
   gem "byebug", platforms: %i[mri mingw x64_mingw]
   gem "capybara", "~> 2.13"
   gem "factory_bot_rails"
+  gem "pry-rails"
   gem "rspec-rails", "~> 3.7"
   gem "selenium-webdriver"
 end
