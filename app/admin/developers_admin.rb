@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Trestle.resource(:developers) do
   menu do
     group :directory do
