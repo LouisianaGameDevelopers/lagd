@@ -1,6 +1,8 @@
 Trestle.resource(:developers) do
   menu do
-    item :developers, icon: "fa fa-user"
+    group :directory do
+      item :developers, icon: "fa fa-user", priority: 1
+    end
   end
 
   table do
