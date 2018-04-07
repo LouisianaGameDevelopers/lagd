@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :person do
+  factory :developer do
     first_name "MyString"
     last_name "MyString"
     twitter "MyString"

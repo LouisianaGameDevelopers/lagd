@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180406042121) do
+ActiveRecord::Schema.define(version: 20180407215634) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "people", force: :cascade do |t|
+  create_table "developers", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
     t.string "twitter"
@@ -25,6 +25,17 @@ ActiveRecord::Schema.define(version: 20180406042121) do
     t.text "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "games", force: :cascade do |t|
+    t.string "name"
+    t.string "twitter"
+    t.string "website"
+    t.text "description"
+    t.bigint "person_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["person_id"], name: "index_games_on_person_id"
   end
 
   create_table "users", force: :cascade do |t|

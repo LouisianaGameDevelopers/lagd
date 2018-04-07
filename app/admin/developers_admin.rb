@@ -1,6 +1,6 @@
-Trestle.resource(:people) do
+Trestle.resource(:developers) do
   menu do
-    item :people, icon: "fa fa-user"
+    item :developers, icon: "fa fa-user"
   end
 
   table do
