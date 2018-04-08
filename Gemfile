@@ -15,6 +15,7 @@ gem "rails", "~> 5.1.6"
 gem "sass-rails", "~> 5.0"
 gem "trestle"
 gem "trestle-auth"
+gem "trestle-simplemde"
 
 group :development, :test do
   gem "byebug", platforms: %i[mri mingw x64_mingw]

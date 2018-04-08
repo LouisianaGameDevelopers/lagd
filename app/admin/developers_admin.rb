@@ -27,7 +27,7 @@ Trestle.resource(:developers) do
       email_field :email
       text_field :discord
       url_field :website
-      text_area :bio
+      editor :bio
     end
 
     tab :games, badge: developer.games.size do
