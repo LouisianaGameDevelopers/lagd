@@ -1,0 +1,13 @@
+!!!
+%html{ lang: "en" }
+  %head
+    %title Lousiana Game Developers
+    = csrf_meta_tags
+    = stylesheet_link_tag "app.css"
+    = javascript_include_tag "app.js"
+    :javascript
+      require('frontend/js/app').init();
+    = breakfast_autoreload_tag
+
+  %body
+    = yield
