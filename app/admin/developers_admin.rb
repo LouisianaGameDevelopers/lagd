@@ -17,17 +17,21 @@ Trestle.resource(:developers) do
     actions
   end
 
-  form do
-    row do
-      col(xs: 6) { text_field :first_name }
-      col(xs: 6) { text_field :last_name }
+  form do |developer|
+    tab :details do
+      row do
+        col(xs: 6) { text_field :first_name }
+        col(xs: 6) { text_field :last_name }
+      end
+      text_field :twitter
+      email_field :email
+      text_field :discord
+      url_field :website
+      text_area :bio
     end
 
-    text_field :twitter
-    email_field :email
-    text_field :discord
-    url_field :website
-
-    text_area :bio
+    tab :games, badge: developer.games.size do
+      render partial: "game", collection: developer.games, as: :game
+    end
   end
 end
