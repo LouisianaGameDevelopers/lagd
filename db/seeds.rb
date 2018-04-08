@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-User.create(email: "admin@lagd.network", password: "password")
+# User.create(email: "admin@lagd.network", password: "password")
 
 Developer.create(
   first_name: "Brendon",
