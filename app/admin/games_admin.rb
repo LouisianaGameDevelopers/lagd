@@ -11,7 +11,6 @@ Trestle.resource(:games) do
     column :name
     column :website
     column :twitter
-    column :genre
     actions
   end
 
@@ -22,10 +21,16 @@ Trestle.resource(:games) do
     text_area :description
 
     sidebar do
-      select :genre_id, Genre.all
-      collection_select(:developer_ids, Developer.all, :id,
-                        :full_name, { label: "Developer(s)" },
-                        multiple: true)
+      collection_select(
+        :genre_ids, Genre.all, :id,
+        :name, { label: "Genre(s)" },
+        multiple: true
+      )
+      collection_select(
+        :developer_ids, Developer.all, :id,
+        :full_name, { label: "Developer(s)" },
+        multiple: true
+      )
     end
   end
 end
